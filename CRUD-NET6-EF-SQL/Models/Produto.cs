@@ -15,5 +15,6 @@ namespace CRUD_NET6_EF_SQL.Models
         [Display(Name = "Nome")]
         public string Nome { get; set; }
 
+
     }
 }
