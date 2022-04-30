@@ -1,8 +1,13 @@
+using CRUD_NET6_EF_SQL.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddDbContext<Contexto>(options => options.UseSqlServer("Data Source=.;Initial Catalog=DB name;Integrated Security=True;MultipleActiveResultSets=True"));
+//string de conexão provisória
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
